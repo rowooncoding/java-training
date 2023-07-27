@@ -11,6 +11,18 @@ public class Order {
         setOrderPrice(price);
     }
 
+    // rundOrder 메소드 생성
+    public boolean runOrder(int cash){
+        if(cash > orderPrice){
+            int change = cash - orderPrice;
+            System.out.println("잔돈 " + change + "와 " + menu + "나왔습니다.");
+            return true;
+        }else{
+            System.out.println("금액부족");
+            return false;
+        }
+    }
+
     // orderPrice에 대한 set get 메소드 생성
     public void setOrderPrice(int price){
         orderPrice = price * count;
