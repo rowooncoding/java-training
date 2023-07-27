@@ -3,6 +3,13 @@ public class Kiosk {
     public static int key = 3;
     private int inventory;
 
+    // 생성자 정의
+    public Kiosk(int inventory){
+        this.inventory = inventory;
+    }
+
+
+
 
 
 
