@@ -8,7 +8,19 @@ public class Kiosk {
         this.inventory = inventory;
     }
 
+    // isInventory, subInventory 메소드 생성
+    public boolean isInventory(int count){
+        if(inventory > count){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
+    public void subInventory(int count){
+        inventory -= count;
+        System.out.println(inventory);
+    }
 
 
 
