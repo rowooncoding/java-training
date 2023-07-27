@@ -8,7 +8,16 @@ public class Order {
     public Order(String menu, int count, int price){
         this.menu = menu;
         this.count = count;
-        // 메소드를 통해 주문금액(orderPrice)할당
+        setOrderPrice(price);
+    }
+
+    // orderPrice에 대한 set get 메소드 생성
+    public void setOrderPrice(int price){
+        orderPrice = price * count;
+    }
+
+    public int getOrderPrice(){
+        return this.orderPrice;
     }
 
 }
