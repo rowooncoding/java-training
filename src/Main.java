@@ -26,9 +26,15 @@ public class Main {
                 // 총 가격 출력
                 Order order = kiosk.initOrder(menu, count);
 
+                // 없는 메뉴 validation
+                if(order == null){
+                    continue;
+                }
+
                 // 음료값 지불
                 int cash = scanner.nextInt();
                 order.runOrder(cash);
+
 
 
 
