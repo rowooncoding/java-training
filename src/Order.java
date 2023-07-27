@@ -5,6 +5,10 @@ public class Order {
     private int orderPrice;
 
     // 생성자 정의
-
+    public Order(String menu, int count, int price){
+        this.menu = menu;
+        this.count = count;
+        // 메소드를 통해 주문금액(orderPrice)할당
+    }
 
 }
