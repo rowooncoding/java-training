@@ -21,6 +21,13 @@ public class Main {
                 // 메뉴와 개수 입력
                 System.out.println("메뉴와 개수를 입력해주세요");
                 String menu = scanner.next();
+
+                // 시스템 종료
+                if(menu.equals("종료")){
+                    System.out.println("시스템 종료");
+                    break;
+                }
+
                 int count = scanner.nextInt();
 
                 // 총 가격 출력
@@ -36,13 +43,11 @@ public class Main {
                 order.runOrder(cash);
 
 
-
-
-
             }
+        }else{
+            System.out.println("키오스크 키가 맞지 않습니다.");
         }
-
-
+        scanner.close();
 
     }
 
