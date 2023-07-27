@@ -26,6 +26,8 @@ public class Order {
     // orderPrice에 대한 set get 메소드 생성
     public void setOrderPrice(int price){
         orderPrice = price * count;
+        // 총 가격 출력
+        System.out.println(orderPrice);
     }
 
     public int getOrderPrice(){
