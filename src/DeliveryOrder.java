@@ -24,7 +24,7 @@ public class DeliveryOrder extends Order{
 
     @Override
     public void setOrderPrice(int price) {
-        super.orderPrice = price * count;
+        super.orderPrice = price * count + 3000;
         System.out.println("배달비 3000원이 추가되어");
         System.out.println(orderPrice + "원 입니다.");
         System.out.println("배달 주문은 정확한 금액을 결정 해주세요.");
