@@ -1,7 +1,7 @@
 public class Order {
     public String menu;
     public int count;
-    private int orderPrice;
+    protected int orderPrice;
 
     public Order(String menu, int count, int price) {
         this.menu = menu;
@@ -23,7 +23,7 @@ public class Order {
     }
 
 
-    private void setOrderPrice(int price) {
+    public void setOrderPrice(int price) {
         orderPrice = price * count;
         System.out.println(orderPrice + "원 입니다.");
     }

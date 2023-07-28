@@ -7,7 +7,7 @@ public class Kiosk {
     }
 
 
-    public Order initOder(String menu, int count) {
+    public Order initOder(String menu, int count, int orderType) {
         int price = 0;
 
         if (menu.equals("딸기요거트")){
@@ -26,8 +26,14 @@ public class Kiosk {
         }
 
         if (isInventory(count)) {
-            Order order = new Order(menu, count, price);
-            return order;
+            if(orderType == 1){
+                return new DeliveryOrder(menu, count, price);
+            } else if (orderType == 2) {
+                return new TakeoutOrder(menu, count, price);
+            }else{
+                return new TakeoutOrder(menu, count, price);
+            }
+
         } else {
             System.out.println("재고가 부족합니다.");
             return null;
