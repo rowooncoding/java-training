@@ -25,7 +25,7 @@ public class TakeoutOrder extends Order{
     @Override
     public void setOrderPrice(int price) {
         // TODO Auto-generated method stub
-        this.orderPrice = price * count + -500;
+        this.orderPrice = price * count - 500;
         System.out.print("테이크 아웃은 500원 할인되어 ");
         System.out.println(orderPrice + "원 입니다.");
     }
