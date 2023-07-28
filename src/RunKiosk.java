@@ -49,6 +49,9 @@ public class RunKiosk {
             }
 
 
+        }else {
+            System.out.println("키오스크 키가 맞지 않습니다");
         }
+        scanner.close();
     }
 }
