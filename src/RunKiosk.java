@@ -34,12 +34,10 @@ public class RunKiosk {
                     System.out.println("포장시간을 입력해주세요");
                     int time = scanner.nextInt();
                     ((TakeoutOrder)order).setTime(time);
-                } else if (orderType == 3) {
+                }else{
                     System.out.println("주문번호를 입력해주세요");
                     int orderNum = scanner.nextInt();
                     ((HereOrder)order).setOrderNum(orderNum);
-                }else{
-                    continue;
                 }
 
                 if(order.runOrder(deposit)){
