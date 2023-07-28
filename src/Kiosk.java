@@ -1,5 +1,5 @@
 public class Kiosk {
-    public final static int key = 3;
+    public static int key = 3;
     private int inventory;
 
     public Kiosk(int inventory) {
@@ -7,7 +7,7 @@ public class Kiosk {
     }
 
 
-    public Order initOder(String menu, int count, int orderType) {
+    public Order initOder(String menu, int count) {
         int price = 0;
 
         if (menu.equals("딸기요거트")){
@@ -26,13 +26,8 @@ public class Kiosk {
         }
 
         if (isInventory(count)) {
-            if (orderType == 1) {
-                return new DeliveryOrder(menu, count, price);
-            } else if (orderType == 2){
-                return new TakeoutOrder(menu, count, price);
-            } else {
-                return new HereOrder(menu, count, price);
-            }
+            Order order = new Order(menu, count, price);
+            return order;
         } else {
             System.out.println("재고가 부족합니다.");
             return null;
