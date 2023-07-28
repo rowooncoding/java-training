@@ -35,7 +35,9 @@ public class RunKiosk {
                     int time = scanner.nextInt();
                     ((TakeoutOrder)order).setTime(time);
                 } else if (orderType == 3) {
-                    System.out.println("방문");
+                    System.out.println("주문번호를 입력해주세요");
+                    int orderNum = scanner.nextInt();
+                    ((HereOrder)order).setOrderNum(orderNum);
                 }else{
                     continue;
                 }
