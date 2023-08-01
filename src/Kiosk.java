@@ -6,7 +6,7 @@ public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, Takeou
         this.inventory = inventory;
     }
 
-    public Order initOder(String menu, int count, int orderType) {
+    public Order initOder(String menu, int count, int orderType) throws KisokException {
         int price = 0;
 
         if (menu.equals("딸기요거트")){
@@ -21,7 +21,7 @@ public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, Takeou
 
         if (price == 0) {
             System.out.println("메뉴가 없습니다.");
-            return null;
+            throw new KisokException(101);
         }
 
         if (isInventory(count)) {
@@ -40,7 +40,7 @@ public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, Takeou
             }
         } else {
             System.out.println("재고가 부족합니다.");
-            return null;
+            throw new KisokException(102);
         }
     }
 
@@ -78,12 +78,12 @@ public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, Takeou
         subInventory(count);
     }
 
-    class KioskException extends Exception{
-        public int code;
+}
 
-        public KioskException(int code){
-            this.code = code;
-        }
+class KisokException extends Exception {
+    public int code;
+
+    public KisokException(int code) {
+        this.code = code;
     }
-
 }

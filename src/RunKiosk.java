@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class RunKiosk {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("키오스크 키를 입력해주세요");
@@ -23,26 +22,26 @@ public class RunKiosk {
                 }
 
                 int count = scanner.nextInt();
-                Order order = kiosk.initOder(menu, count, orderCode);
-                if (order == null) {
-                    continue;
+                try {
+                    Order order = kiosk.initOder(menu, count, orderCode);
+                    int deposit = scanner.nextInt();
+                    if (orderCode == 1) {
+                        System.out.println("주소를 입력해주세요");
+                        String locate = scanner.next();
+                        ((DeliveryOrder) order).setLocate(locate);
+                    } else if (orderCode == 2) {
+                        System.out.println("포장시간을 입력해주세요");
+                        int time = scanner.nextInt();
+                        ((TakeoutOrder) order).setTime(time);
+                    } else {
+                        System.out.println("주문번호를 입력해주세요");
+                        int orderNum = scanner.nextInt();
+                        ((HereOrder) order).setOrderNum(orderNum);
+                    }
+                    order.runOrder(deposit);
+                } catch (KisokException e) {
+                    System.out.println("error code: " + e.code);
                 }
-
-                int deposit = scanner.nextInt();
-                if (orderCode == 1) {
-                    System.out.println("주소를 입력해주세요");
-                    String locate = scanner.next();
-                    ((DeliveryOrder) order).setLocate(locate);
-                } else if (orderCode == 2) {
-                    System.out.println("포장시간을 입력해주세요");
-                    int time = scanner.nextInt();
-                    ((TakeoutOrder) order).setTime(time);
-                } else {
-                    System.out.println("주문번호를 입력해주세요");
-                    int orderNum = scanner.nextInt();
-                    ((HereOrder) order).setOrderNum(orderNum);
-                }
-                order.runOrder(deposit);
 
             }
 
