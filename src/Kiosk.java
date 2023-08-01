@@ -1,8 +1,4 @@
-import training10.DeliveryOrder.OnDelivery;
-import training10.HereOrder.OnHere;
-import training10.TakeoutOrder.OnTakeout;
-
-public class Kiosk implements OnDelivery, OnHere, OnTakeout{
+public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, TakeoutOrder.OnTakeout {
     public static int key = 3;
     private int inventory;
 
