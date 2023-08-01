@@ -1,9 +1,9 @@
 public class DeliveryOrder extends Order{
+    private OnDelivery onDelivery;
     private String locate;
-    OnDelivery onDelivery;
 
-    public interface OnDelivery{
-        void successDelivery(String locate, String menu);
+    interface OnDelivery{
+        void successDelivery(String locate, String menu, int count);
     }
 
     public void setOnDelivery(OnDelivery onDelivery) {
@@ -18,15 +18,14 @@ public class DeliveryOrder extends Order{
         this.locate =locate;
     }
 
+
     @Override
-    public boolean runOrder(int deposit) {
+    public void runOrder(int deposit) {
         int change = deposit - orderPrice;
         if (change == 0) {
-
-            return true;
+            onDelivery.successDelivery(locate, menu, count);
         } else {
             System.out.println("금액이 맞지 않습니다.");
-            return false;
         }
     }
 

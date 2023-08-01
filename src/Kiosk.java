@@ -1,11 +1,14 @@
-public class Kiosk implements DeliveryOrder.OnDelivery {
-    public final static int key = 3;
+import training10.DeliveryOrder.OnDelivery;
+import training10.HereOrder.OnHere;
+import training10.TakeoutOrder.OnTakeout;
+
+public class Kiosk implements OnDelivery, OnHere, OnTakeout{
+    public static int key = 3;
     private int inventory;
 
     public Kiosk(int inventory) {
         this.inventory = inventory;
     }
-
 
     public Order initOder(String menu, int count, int orderType) {
         int price = 0;
@@ -27,20 +30,23 @@ public class Kiosk implements DeliveryOrder.OnDelivery {
 
         if (isInventory(count)) {
             if (orderType == 1) {
-                DeliveryOrder deliveryOrder = new DeliveryOrder(menu, count, price);
-                deliveryOrder.setOnDelivery(this);
-                return deliveryOrder;
+                DeliveryOrder order = new DeliveryOrder(menu, count, price);
+                order.setOnDelivery(this);
+                return order;
             } else if (orderType == 2){
-                return new TakeoutOrder(menu, count, price);
+                TakeoutOrder order = new TakeoutOrder(menu, count, price);
+                order.setOnTakeout(this);
+                return order;
             } else {
-                return new HereOrder(menu, count, price);
+                HereOrder order = new HereOrder(menu, count, price);
+                order.setOnHere(this);
+                return order;
             }
         } else {
             System.out.println("재고가 부족합니다.");
             return null;
         }
     }
-
 
     private boolean isInventory(int count) {
         if (inventory >= count) {
@@ -50,14 +56,30 @@ public class Kiosk implements DeliveryOrder.OnDelivery {
         }
     }
 
-
     public void subInventory(int count) {
         inventory -= count;
     }
 
     @Override
-    public void successDelivery(String locate, String menu) {
+    public void successDelivery(String locate, String menu, int count) {
         System.out.print(locate + " 주소로 ");
         System.out.println(menu + " 배달 주문이 완료 되었습니다.");
+        subInventory(count);
     }
+    @Override
+    public void successHere(int change, int orderNum, String menu, int count) {
+        System.out.println("잔돈 "+change+"입니다. ");
+        System.out.print(orderNum+ " 주문번호로 ");
+        System.out.println(menu + " 주문 완료되었습니다.");
+        subInventory(count);
+
+    }
+    @Override
+    public void successTakeout(int change, int time, String menu, int count) {
+        System.out.println("잔돈 "+change+"입니다. ");
+        System.out.print(time+ " 분후 ");
+        System.out.println(menu + " 포장주문 완료되었습니다.");
+        subInventory(count);
+    }
+
 }

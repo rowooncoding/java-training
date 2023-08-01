@@ -27,6 +27,7 @@ public class RunKiosk {
                 if (order == null) {
                     continue;
                 }
+
                 int deposit = scanner.nextInt();
                 if (orderCode == 1) {
                     System.out.println("주소를 입력해주세요");
@@ -41,10 +42,7 @@ public class RunKiosk {
                     int orderNum = scanner.nextInt();
                     ((HereOrder) order).setOrderNum(orderNum);
                 }
-
-                if (order.runOrder(deposit)) {
-                    kiosk.subInventory(count);
-                }
+                order.runOrder(deposit);
 
             }
 

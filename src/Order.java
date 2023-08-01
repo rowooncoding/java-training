@@ -9,8 +9,7 @@ public abstract class Order {
         setOrderPrice(price);
     }
 
-    public abstract boolean runOrder(int deposit);
-
+    public abstract void runOrder(int deposit);
 
 
     public void setOrderPrice(int price) {
