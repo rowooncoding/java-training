@@ -78,4 +78,12 @@ public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, Takeou
         subInventory(count);
     }
 
+    class KioskException extends Exception{
+        public int code;
+
+        public KioskException(int code){
+            this.code = code;
+        }
+    }
+
 }
