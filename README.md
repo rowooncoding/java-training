@@ -169,6 +169,12 @@ d. 카드합의 비교에 따라 다음과 같이 출력
 - 플레이어가 높으면 플레이어 승리
 - 컴퓨터가 높으면 컴퓨터 승리
 
+---
+
+### 13. 키오스크에서 배열 활용
+<img width="1398" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/20a92a35-8e9f-4632-83d1-566d03cc8cb9">
+<img width="813" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/d178051a-9643-495a-bbfb-cfdd53fc5331">
+
 
 
 
