@@ -175,6 +175,9 @@ d. 카드합의 비교에 따라 다음과 같이 출력
 <img width="1398" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/20a92a35-8e9f-4632-83d1-566d03cc8cb9">
 <img width="813" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/d178051a-9643-495a-bbfb-cfdd53fc5331">
 
+### 14. 2차원 배열을 활용한 사다리 게임 만들기
+<img width="1391" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/bcacd8f1-fe5e-4b46-806f-0bbb7fd3e1c6">
+<img width="1436" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/22ae436b-d3b6-4149-bbbc-8bc4de064732">
 
 
 
