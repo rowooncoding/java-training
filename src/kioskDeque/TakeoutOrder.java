@@ -1,3 +1,8 @@
+package kioskDeque;
+
+import kioskDeque.Menu;
+import kioskDeque.Order;
+
 import java.util.List;
 
 public class TakeoutOrder extends Order{

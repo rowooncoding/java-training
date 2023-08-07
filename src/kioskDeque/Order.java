@@ -1,4 +1,5 @@
-import java.awt.Menu;
+package kioskDeque;
+
 import java.util.List;
 
 public abstract class Order {

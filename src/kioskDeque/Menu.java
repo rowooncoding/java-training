@@ -1,3 +1,7 @@
+package kioskDeque;
+
+import kioskDeque.KisokException;
+
 public class Menu {
     public String name;
     public int price;
