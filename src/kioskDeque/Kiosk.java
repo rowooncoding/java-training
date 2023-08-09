@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-public class Kiosk implements OnDelivery, OnHere, OnTakeout{
+public class Kiosk implements DeliveryOrder.OnDelivery, HereOrder.OnHere, TakeoutOrder.OnTakeout {
     public static int key = 3;
     private int inventory;
     private Deque<Order> orderQ;

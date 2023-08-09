@@ -42,11 +42,11 @@ public class RunKiosk {
                             orderCode);
 
                     int deposit = scanner.nextInt();
-                    if (orderCode == 1) {
+                    if (order.orderType == 1) {
                         System.out.println("주소를 입력해주세요");
                         String locate = scanner.next();
                         ((DeliveryOrder) order).setLocate(locate);
-                    } else if (orderCode == 2) {
+                    } else if (order.orderType == 2) {
                         System.out.println("포장시간을 입력해주세요");
                         int time = scanner.nextInt();
                         ((TakeoutOrder) order).setTime(time);
