@@ -179,8 +179,28 @@ d. 카드합의 비교에 따라 다음과 같이 출력
 <img width="1391" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/bcacd8f1-fe5e-4b46-806f-0bbb7fd3e1c6">
 <img width="1436" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/22ae436b-d3b6-4149-bbbc-8bc4de064732">
 
+### 15. 키오스크에서 리스트 활용
+<img width="1239" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/c805c2ac-b52c-468f-8332-806f567b9165">
 
+### 16. 키오스크에 주문 대기열 추가
+<img width="1302" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/1a893e71-cd09-4810-9831-f3c601a8fd10">
 
+### 17. 간단한 숫자 테트리스 만들어보기
+<img width="1238" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/5d17ce98-0553-4718-b43a-93cabe7b8f8d">
+<img width="1414" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/05cbc9a5-4bd9-4de4-94eb-909358b44a60">
+
+### 18. 로또 번호 뽑기
+<img width="1360" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/d23c16a9-e2d4-4222-87df-f530e909882c">
+
+### 19. 키오스크 실습에 맵구조 추가
+<img width="1321" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/b0531fdc-baa7-48b7-9f16-0901ea58d9c9">
+<img width="785" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/a7db9c9c-b491-4eee-912e-6030dbed6991">
+
+### 20. 키오스크 실습에 맵구조 추가
+<img width="1361" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/ee91af6c-ff01-4712-8e7b-27de894146ad">
+<img width="1355" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/6a1c89dc-d11f-4228-b86b-2c8f8243049e">
+<img width="1377" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/c296fc54-6efc-453d-b39c-230fb25a26cf">
+<img width="1424" alt="image" src="https://github.com/rowooncoding/java-training/assets/114975279/a7627cd6-7523-462d-abcc-7d7e6fe6a1c9">
 
 
 
